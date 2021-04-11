@@ -13,7 +13,6 @@ function scheduleMeeting(startTime, durationMinutes) {
       }
       return NaN;
     });
-    console.log(time);
   if (
     !time.includes(NaN) &&
     time.length === 2 &&
@@ -30,7 +29,6 @@ function scheduleMeeting(startTime, durationMinutes) {
     } else {
       time[1] += durationMinutes;
     }
-    console.log(time)
     return (
       Number(time.join("")) >= Number(dayStart.replace(":", "")) &&
       Number(time.join("")) <= Number(dayEnd.replace(":", ""))
